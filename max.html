@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/hover.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="max.css">
-
     <link href='https://fonts.googleapis.com/css?family=Princess+Sofia' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
-    <link href="css/hover.css" rel="stylesheet" media="all">
+
     <script>
         $(function(){
             $('.pull_letters').draggable({
-                //containment:'.title_letters',
+                containment:'body',
                 revert: true});
+        });
+
+        $(document).ready(function() {
+            $("#1").click(function() {
+                $.ajax({
+                    url : "helloworld.txt",
+                    dataType: "text",
+                    success : function (data) {
+                        $(".main").html(data);
+                    }
+                });
+            });
         });
     </script>
 </head>
@@ -36,14 +48,16 @@
     <div class="row">
         <div class="col-md-9 main">
           <h1>Main content</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sapiente
+          <p id='main_text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sapiente
             similique magnam porro pariatur rerum consequuntur earum, incidunt laboriosam
             recusandae, nihil labore placeat ratione, nostrum cupiditate. Dicta ex,
             explicabo dolore.</p>
         </div>
-      <div class="col-md-3 nav"><p>Navigation</p>
+      <div class="col-md-3 nav">
+          <br>
+          <br>
           <ul>
-            <li>one</li>
+            <li id="1">one</li>
             <li>two</li>
             <li>three</li>
             <li>four</li>

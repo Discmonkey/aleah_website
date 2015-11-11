@@ -4,35 +4,59 @@ body, p {
   padding: 0;
 }
 
+ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    color: #9f39c5;
+    padding: 5px 20px;
+    border: 1px solid #470;
+    margin: 0 10px 10px 0;
+    background: white;
+    border-radius: 10px;
+    z-index: 2;
+
+}
+a {
+    color: #9f39c5;
+}
 .title_letters {
     padding: 30px 0 10px 0;
 }
 .pull_letters{
     font-family: 'Princess Sofia', cursive;
-    color: #900;
+    color: #9f39c5;
     width: 100px;
     padding: 0 10px;
+    z-index: 3;
 }
 .header {
- /* background-color: #599f32;*/
+  background-color: #599f32;
   margin: 0 0 5px 0;
   border-radius: 10px;
   border: 2px solid #770;
+  z-index: 4;
 }
 
 .main {
- /* background-color: #f589bc;*/
+  background-color: #f589bc;
   margin: 5px 5px 0 0;
   border-radius: 10px;
   border: 2px solid #700;
+  min-height: 400px;
+  z-index: 4;
 }
 
 .nav {
- /* background-color: #9f39c5;*/
+  background-color: #9f39c5;
   margin: 5px 0 0 5px;
   padding: 0 0 0 10px;
   border-radius: 10px;
   border: 2px solid #770;
+  min-height: 400px;
 }
 
 .container {
@@ -73,7 +97,12 @@ body, p {
     width: 100%;
     margin: 5px 0;
   }
-
+  .main {
+    min-height: 350px
+  }
+  .nav {
+    min-height: 50px;
+  }
   .col-md-3 {
     width: 100%;
     margin: 5px 0;
