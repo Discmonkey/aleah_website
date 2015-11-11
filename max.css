@@ -1,12 +1,11 @@
 body, p {
-  color: #fff;
+  color: #000;
   margin: 0;
   padding: 0;
 }
 
 .title_letters {
-    padding: 10px 0 10px 0;
-    height: 150px;
+    padding: 30px 0 10px 0;
 }
 .pull_letters{
     font-family: 'Princess Sofia', cursive;
@@ -15,19 +14,25 @@ body, p {
     padding: 0 10px;
 }
 .header {
-  background-color: #599f32;
+ /* background-color: #599f32;*/
   margin: 0 0 5px 0;
+  border-radius: 10px;
+  border: 2px solid #770;
 }
 
 .main {
-  background-color: #f589bc;
+ /* background-color: #f589bc;*/
   margin: 5px 5px 0 0;
+  border-radius: 10px;
+  border: 2px solid #700;
 }
 
 .nav {
-  background-color: #9f39c5;
+ /* background-color: #9f39c5;*/
   margin: 5px 0 0 5px;
   padding: 0 0 0 10px;
+  border-radius: 10px;
+  border: 2px solid #770;
 }
 
 .container {
@@ -39,7 +44,7 @@ body, p {
 }
 
 .col-md-3 {
-  width: 200px;
+  width: 230px;
 }
 
 @media screen and (max-width: 991px){
