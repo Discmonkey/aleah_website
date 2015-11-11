@@ -3,7 +3,14 @@ body, p {
   margin: 0;
   padding: 0;
 }
-
+.title_letters {
+    padding: 10px 0 10px 0;
+}
+#pull_letters{
+    font-family: 'Princess Sofia', cursive;
+    color: #900;
+    /*text-align: center; */
+}
 .header {
   background-color: #599f32;
   margin: 0 0 5px 0;
