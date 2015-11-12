@@ -60,7 +60,16 @@
                 $(".main").animate({height: 'toggle'});
                 $('.main').animate({width: 'toggle'});
                 $('.main').promise().done(function(){
-                    call_ajax('stories/bio.txt');
+                    call_ajax('extra_files/bio.txt');
+                });
+            });
+
+            $('#head3').click(function() {
+                $(".main").html("")
+                $(".main").animate({height: 'toggle'});
+                $('.main').animate({width: 'toggle'});
+                $('.main').promise().done(function(){
+                    call_ajax('extra_files/form.txt');
                 });
             });
 
