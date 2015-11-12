@@ -13,6 +13,16 @@
 
     <script>
 
+        function call_ajax(file){
+            $.ajax({
+                url : file,
+                dataType: "text",
+                success : function (data) {
+                    $(".main").html(data);
+                }
+            });
+        }
+
         $(function(){
             $('.pull_letters').draggable({
                 containment:'body',
@@ -24,16 +34,39 @@
         $(document).ready(function() {
             $("li").each(function(index){
                 $(this).click(function() {
-                    $.ajax({
-                        url : "stories/" + story_list[index],
-                        dataType: "text",
-                        success : function (data) {
-                            $(".main").html(data);
-                        }
-                     });
+                    $(".main").html("")
+                    $(".main").animate({height: 'toggle'});
+                    $('.main').animate({width: 'toggle'});
+                    $('.main').promise().done(function(){
+                        call_ajax("stories/" + story_list[index]);
+                    });
                 });
             });
+
+            $('#head2').click(function(){
+                if($(".nav").css("box-shadow")=="rgb(68, 68, 255) 0px 0px 0px 0px"){
+                        $(".nav").css("box-shadow","0px 0px 10px 10px #44F");
+                    } else{
+                        $(".nav").css("box-shadow","0px 0px 0px 0px #44F");
+                    };
+            });
+
+            $('.nav').mouseenter(function(){
+                $(".nav").css("box-shadow","0px 0px 0px 0px #44F");
+            });
+
+            $('#head1').click(function() {
+                $(".main").html("")
+                $(".main").animate({height: 'toggle'});
+                $('.main').animate({width: 'toggle'});
+                $('.main').promise().done(function(){
+                    call_ajax('stories/bio.txt');
+                });
+            });
+
         });
+
+
 
     </script>
 </head>
@@ -49,7 +82,7 @@
         </div>
     </di>
     <div class="row">
-        <div class="col-md-12 header text-center"> <p class="header_span"> Bio </p> <p class="header_span"> Tales </p> <p class="header_span"> Contact </p> </div>
+        <div class="col-md-12 header text-center"> <p class="header_p" id="head1"> Bio </p> <p class="header_p" id="head2"> Tales </p> <p class="header_p" id="head3"> Contact </p> </div>
     </div>
     <div class="row">
         <div class="col-md-9 main">

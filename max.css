@@ -67,8 +67,8 @@ li:click {
   border-radius: 10px;
   border: 2px solid #770;
   min-height: 400px;
+  box-shadow: 0px 0px 0px 0px #44F;
 }
-
 .container {
   width: 970px;
 }
@@ -81,7 +81,7 @@ li:click {
   width: 230px;
 }
 
-.header_span {
+.header_p {
   font-family: 'Princess Sofia', cursive;
   margin: 0 10px 0 10px;
   font-size: 150%;
