@@ -1,7 +1,0 @@
-header('content-type: application/json; charset=utf-8');
-header("access-control-allow-origin: *");
-
-
-I am a monkey
-and I'm floating in space
-i don't have much air 
